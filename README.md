@@ -5,57 +5,57 @@ This PowerShell-based monitor checks whether your Jellyfin server is currently s
 Ideal for home servers or media centers where network congestion from torrenting can interfere with smooth playback.
 ⚙️ Features
 
-    ✅ Monitors Jellyfin's API for active streaming sessions
+✅ Monitors Jellyfin's API for active streaming sessions
 
-    ✅ Pauses all qBittorrent downloads during playback
+✅ Pauses all qBittorrent downloads during playback
 
-    ✅ Resumes downloads when playback ends
+✅ Resumes downloads when playback ends
 
-    ✅ Runs silently as a Windows service using NSSM
+ ✅ Runs silently as a Windows service using NSSM
 
-    ✅ Logs status changes, errors, and API interactions for troubleshooting
+ ✅ Logs status changes, errors, and API interactions for troubleshooting
 
 🛠 Requirements
 
-    Windows (tested on Windows Server 2022)
+Windows (tested on Windows Server 2022)
 
-    qBittorrent with Web UI enabled
+ qBittorrent with Web UI enabled
 
-    Jellyfin media server
+ Jellyfin media server
 
-    NSSM to run as a background service
+ NSSM to run as a background service
 
-    PowerShell 5.1 or newer
+  PowerShell 5.1 or newer
 
 🚀 Installation
 
-    Clone this repo or download the .ps1 script and helper files.
+ Clone this repo or download the .ps1 script and helper files.
 
-    Modify the script to include your:
+ Modify the script to include your:
 
-        Jellyfin server address and API key
+   Jellyfin server address and API key
 
-        qBittorrent Web UI credentials and port
+   qBittorrent Web UI credentials and port
 
-    Use the provided .bat file or install as a service manually with nssm:
+ Install as a service manually with nssm:
 
     nssm install JellyfinQbtMonitor PowerShell.exe -ExecutionPolicy Bypass -NoProfile -File "C:\Path\To\JellyfinQbtMonitor.ps1"
 
-    Configure the service to start automatically and set log paths if needed.
+   Configure the service to start automatically and set log paths if needed.
 
-    Done! The script will monitor your Jellyfin server every 30 seconds.
+Done! The script will monitor your Jellyfin server every 30 seconds.
 
 📄 Logging
 
 Logs are written to a specified directory (default: C:\ServerScripts\Logs) and include:
 
-    Timestamps
+Timestamps
 
-    Playback state changes
+Playback state changes
 
-    qBittorrent API responses
+qBittorrent API responses
 
-    Errors or failed requests
+Errors or failed requests
 
 💡 Why?
 

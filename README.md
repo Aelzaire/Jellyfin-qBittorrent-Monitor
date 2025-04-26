@@ -40,6 +40,12 @@ Windows (tested on Windows Server 2022)
  Install as a service manually with nssm (Make sure to modify the path below):
    
     nssm install JellyfinQbtMonitor PowerShell.exe -ExecutionPolicy Bypass -NoProfile -File "C:\Path\To\JellyfinQbtMonitor.ps1"
+    nssm set JellyfinQbtMonitor DisplayName "Jellyfin qBittorrent Monitor"
+    nssm set JellyfinQbtMonitor Description "Monitors Jellyfin streaming and manages qBittorrent download speeds"
+    nssm set JellyfinQbtMonitor ObjectName "LocalSystem" # or a specific user account
+    nssm set JellyfinQbtMonitor Start SERVICE_AUTO_START
+    nssm set JellyfinQbtMonitor AppStdout "C:\path\to\logs\jellyfin-qbt-monitor.log"
+    nssm set JellyfinQbtMonitor AppStderr "C:\path\to\logs\jellyfin-qbt-monitor-error.log"
 
    Configure the service to start automatically and set log paths if needed.
 

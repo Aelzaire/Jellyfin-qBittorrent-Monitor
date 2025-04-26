@@ -39,6 +39,7 @@ Windows (tested on Windows Server 2022)
 
  Install as a service manually with nssm:
    (Make sure to modify the path below)
+   
     nssm install JellyfinQbtMonitor PowerShell.exe -ExecutionPolicy Bypass -NoProfile -File "C:\Path\To\JellyfinQbtMonitor.ps1"
 
    Configure the service to start automatically and set log paths if needed.

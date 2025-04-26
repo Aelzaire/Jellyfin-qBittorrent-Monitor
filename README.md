@@ -37,8 +37,7 @@ Windows (tested on Windows Server 2022)
 
    qBittorrent Web UI credentials and port
 
- Install as a service manually with nssm:
-   (Make sure to modify the path below)
+ Install as a service manually with nssm (Make sure to modify the path below):
    
     nssm install JellyfinQbtMonitor PowerShell.exe -ExecutionPolicy Bypass -NoProfile -File "C:\Path\To\JellyfinQbtMonitor.ps1"
 

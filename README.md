@@ -3,6 +3,7 @@
 This PowerShell-based monitor checks whether your Jellyfin server is currently streaming media. If it detects active playback, it pauses all qBittorrent downloads to prioritize bandwidth. When no media is streaming, it resumes the downloads—automatically, silently, and efficiently.
 
 Ideal for home servers or media centers where network congestion from torrenting can interfere with smooth playback.
+
 ⚙️ Features
 
 ✅ Monitors Jellyfin's API for active streaming sessions
